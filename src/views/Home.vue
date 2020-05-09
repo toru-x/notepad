@@ -2,8 +2,9 @@
   <div class="home">
     <ul v-for="memo in newest" :key="memo.id">
       <li>
+        <router-link :to ="{name:'Edit',params:{id: memo.id}}">
         {{memo.body}}
-      </li>
+        </router-link></li>
     </ul>
   </div>
 </template>
